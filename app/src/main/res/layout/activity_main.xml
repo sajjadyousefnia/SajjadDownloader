@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- EditText to take the url from the user -->
+    <EditText
+        android:id="@+id/url_etText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/type_or_paste_your_url_here" />
+
+    <!-- Button to start downloading from file -->
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/url_etText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/download" />
+
+    <!-- linear layout that contains widgets to show information -->
+    <LinearLayout
+        android:id="@+id/details_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_download"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_design_layout"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <!-- Textview to show the file name -->
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/click_on_start_button_to_start_downloading"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- progress bar to show the progress of downloading -->
+        <ProgressBar
+            android:id="@+id/progress_horizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:progressTint="@android:color/holo_blue_bright"
+            tools:ignore="UnusedAttribute" />
+
+        <!-- textview to show the downloading percentage -->
+        <TextView
+            android:id="@+id/downloading_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- this linear layout contains buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <!-- button to start the downloading -->
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start" />
+
+            <!-- button to cancel or stop the downloading -->
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stop" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- this textview will show the path where
+         the downloaded file is stored -->
+    <TextView
+        android:id="@+id/txt_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_box"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

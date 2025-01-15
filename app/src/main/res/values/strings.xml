@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SajjadDownloader</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="type_or_paste_your_url_here">Type or Paste Your URL Here</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="click_on_start_button_to_start_downloading">Click on Start Button to Start Downloading</string>
+</resources>
