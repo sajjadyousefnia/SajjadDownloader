@@ -59,12 +59,9 @@ class MainActivity : AppCompatActivity() {
         editTextUrl = findViewById(R.id.url_etText);
 
 
-        val hotel =
-            "http://480cdn.silingvid.xyz/480p/Movies/2021/M/Monster_Pets_A_Hotel_Transylvania_Short_Film_2021_480p_Web-Dl_Filamingo.mkv"
-
-        val mrbean =
-            "http://480cdn.silingvid.xyz/480p/Series/M/Man_Vs_Bee/Man.Vs.Bee.S01E01.480p.WEB-DL.mkv"
-        editTextUrl.setText(hotel)
+        val videoUrl =
+            "https://persian16.asset.aparat.com/aparat-video/6da67f74247bb27836c9abff3cbca39962747369-720p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjQ3MjgzY2ZmNmUwZmQ5MmU5OWJiYjAxMTY5YzI0OWVhIiwiZXhwIjoxNzM3MTQ2MTk2LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.8ee738w3SKKXoUiPlpQL3CasswdL8nZG8WP2VgyYDVk"
+        editTextUrl.setText(videoUrl)
 
         // finding button by its id
         buttonDownload = findViewById(R.id.btn_download);
@@ -213,7 +210,7 @@ class MainActivity : AppCompatActivity() {
                         ).show()
                     }
 
-                    override fun onError(error: Error?) {
+                    override fun onError(error: com.sajjady.sajjaddownloader.downloader.Error?) {
                         // setting the text start
                         btnStart.setText("Start");
                         // resetting the download percentage
